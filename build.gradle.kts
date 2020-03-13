@@ -48,8 +48,8 @@ tasks.withType<Test> {
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
   kotlinOptions {
     freeCompilerArgs = listOf(
-        "-Xjsr305=strict",
-        "-Xcoroutines=enable"
+        // "-Xcoroutines=enable", // no effect on kotlin >= 1.3, already enabled
+        "-Xjsr305=strict"
     )
     jvmTarget = "1.8"
   }
